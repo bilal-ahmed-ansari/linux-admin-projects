@@ -26,3 +26,5 @@ free -h
 
 echo
 echo "Monitoring Completed"
+
+echo "Monitoring Script version 2"
