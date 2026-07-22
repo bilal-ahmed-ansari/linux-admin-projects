@@ -1,54 +1,34 @@
 # About Me
 
-### Linux Administrator | Technical Support Engineer | Aspiring DevOps Engineer
+### Linux Administrator | Technical Support Engineer | Aspiring Cloud & DevOps Engineer
 # Bilal Ahmed Ansari
 I'm a Linux Administrator with 5+ years of experience managing Linux, Windows, and macOS environments.My background includes system administration, virtualization, cloud technologies, automation, and enterprise technical support.
 
-I enjoy troubleshooting complex infrastructure issues, automating repetitive tasks with shell scripting, and continuously learning modern DevOps practices.
+I am passionate about Linux, Cloud DevOps technologies and continuously improving my technical skills by building practical projects. I am looking for opportunities as a Linux System Administrator, DevOps Engineer, or Cloud Engineer, where I can contribute, learn, and grow in modern infrastructure and automation technologies.
 
 ## 🚀 Technologies & Tools
 
-* **Operating Systems:** Linux (RHEL), Windows, macOS
-* **Cloud & Virtualization:** Azure, VMware, Proxmox
-* **Version Control:** Git, Bitbucket, Perforce
+* **Operating Systems:** Linux, Windows 10/11, macOS
+* **Cloud & Virtualization:** VMware, Proxmox
+* **Version Control:** Git, Bitbucket, 
 * **Automation:** Bash Shell Scripting, Cron Jobs
-* **Networking:** TCP/IP, DNS, DHCP, NFS, FTP, HTTP, VPN
-* **Tools:** Jira, Jenkins, Active Directory, Google Admin
+* **Networking:** TCP/IP, DNS, DHCP, NFS, FTP, HTTP, VPN, Subnetting (Basic)
+* **Tools:** Jira, Active Directory, Google Admin
 * **Security:** SSH, Firewall Management, VPN Administration
 
 ## 🌱 Currently Learning
 
-* DevOps Practices
-* CI/CD Pipelines
-* Docker & Containerization
-* Kubernetes
-* Infrastructure Automation
-
-## 📜 Certifications
-
-* RHCSA (Red Hat Certified System Administrator)
-* Microsoft Azure Fundamentals
+* Ansible, AWS
+* DevOps Practices with it's Tools
 
 ### "Automate what is repetitive. Optimize what is slow. Learn what is new."
 
 
-# 🚀 This is my DevOps Notes & Making avaible for others..
+# 🚀 This is my Linux, DevOps & Cloud Notes & I am making avaible for others..
 
-A complete hands-on DevOps learning repository covering as per my knowledge
+A complete hands-on Linux, Cloud and DevOps learning repository will be covering as per my knowledge
 
-## 🛠️ DevOps Technologies
 
-- 🐧 Linux Administration
-- 🌿 Git & GitHub
-- 🐳 Docker Containerization
-- ☸️ Kubernetes Orchestration
-- 🔧 Jenkins Automation
-- 🏗️ Terraform Infrastructure as Code (IaC)
-- ⚙️ Ansible Configuration Management
-- ☁️ AWS Cloud Services
-- 🚀 CI/CD Pipelines & DevOps Projects
-
----
 
 ## 📚 Topics Covered As of Now..
 
