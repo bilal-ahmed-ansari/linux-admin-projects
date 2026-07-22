@@ -1,151 +1,187 @@
 Shutdown machine:
 sudo shutdown -h now
 
-tail -f /var/log/syslog
--f means follow 
-If new line is added in file then it will show on screen
-To exit, press ctrl c
+Reboot machine: 
+sudo reboot
 
-head -n 5 filename
-head -5 filename
+1. pwd ==> Print Working Directory
+Shows on which path you are in
+Command: pwd
 
-Less
-If 1000 line is there in your file then we use this command
-q: exit
-/Word: search for word
-n: search for next word
-Space: next page
-b: previous page
+Output:
+/home/bilal/Documents
+This means you are currently inside Documents directory.
 
-More: similar to less, but here the navigation is limited
-Space: next page
-q: exit
+2. ls ==> List
+Display files and folders in current directory
+Command: ls
 
-To print the text on screen or print values of varibales
-name="Bilal"
-echo $name
+Output:
+file1.txt
+notes.txt
+Documents
+Pictures
 
-It will create file if file is not created
+3. ls -l
+Display files and folders with detailed list such as permission, owner, size and date.
+Command: ls -l
+
+4. ls -a
+Display files including hidden files (starting from .)
+Command: ls -a
+
+5. cd (Change Directory)
+Move from one directory to another
+Command: cd Documents
+Moves into Documnets directory.
+
+Go back one directory
+cd ..
+
+Go to the home directory
+cd
+
+6. mkdir (Make directory)
+Creates a new directory/folder
+Command: mkdir project
+
+Creates a directory called project.
+
+7. rmdir (Remove Directory)
+The directory must be empty, then only it remove directory
+Command: rmdir project
+
+8. touch
+Creates an empty file
+Command: touch notes.txt
+
+9. rm (Remove)
+Command: rm filename
+
+If you run rm -r <directory-name> then it will delete a directory and everything inside it
+
+10. cp (Copy)
+Command: cp notes.txt backup.txt
+It create a copy of notes.txt called backup.txt
+
+11. mv (Move)
+Moves a file to another location or renames it.
+
+i)Rename a file:
+mv notes.txt mynotes.txt
+
+ii)Move a file:
+mv notes.txt Documents/
+
+12. cat
+Displays the contents of a file.
+
+Command:
+cat notes.txt
+
+Example output:
+Linux is an operating system.
+
+13. head
+Displays the first 10 lines of a file.
+
+Command: head notes.txt
+
+14. tail
+Displays the last 10 lines of a file.
+
+Command: tail notes.txt
+
+15. echo
+Displays text on the terminal or writes text to a file.
+
+i)Display text:
+echo "Hello"
+
+Output:
+Hello
+
+ii)Write text to a file:
 echo "Hello Linux" > file.txt
 
-Redirection
-Change input and output direction 
+ii)Append text to a file using >> symbol
 
-Send the data to output and overwrite the file
-echo "Hello Linux" > file.txt
+16. whoami
+Display the username of currently logegd in user.
 
-No need to override the file, only append the output
-echo "Bilal" >> file.txt
+17. w
+Who is currently loggedin and what they are doing
 
-sort < names.txt
-It take file as an input and perform operation
+Command: w
 
-/dev/null
-It acts as a dustbin or black hole in linux
-Whatever we send here, it will discard those things.
+Ouput:
+USER     TTY      FROM         LOGIN@   IDLE   JCPU   PCPU   WHAT
+bilal    pts/0    192.168.1.5  10:30    2:00   0.10s  0.01s  vim notes.txt
 
-ls > /dev/null
-ls will work but it won't show output on screen
+Explaination:
+ - USER → Logged-in username
+ - TTY → Terminal being used
+ - FROM → IP address or login location
+ - LOGIN@ → Login time
+ - IDLE → How long the user has been inactive
+ - WHAT → Current command or program the user is running
 
-To see output on screen and save that output on file
-ls | tee file.txt
+18.date
+Displays the current system date and time.
 
-It won't delete older data 
-ls | tee -a file.txt
+Command: date
 
-xargs
-The command output will send to another command argument
-echo "file" | xargs rm
+20. clear
+Clears everything displayed on the terminal screen.
 
-Search files less than 90 days
-find -mtime +90
+Command: clear
 
-Find files and delete
-find . -name "test.txt" -delete
+21. history
+Displays previously executed commands.
 
-Locate
-It search files using database hence speed is fast
-locate filename
+Command: history
 
-If new files is not searching 
-sudo updatedb
+22. man
+Displays the manual (help page) for a command.
 
-Grep
-It search text or pattern in file
-grep root /etc/passwd
+Comamnd: man ls
+Shows detailed information about the ls command.
 
-Recursive search 
-Grep -r "paswd" /etc
+23. ping
+Checks whether another computer or website is reachable.
 
-Line no
-Grep -n
-Ignore case
--i
-Search both the words
-grep -E "error|failed" filename
+Comamnd: ping google.com
 
-Awk
-Depending on column it will extract the data
-Print 1st column
-awk '{print $1}' filename 
-Print age > 28
-awk '$2 > 28 {print $1}' filename 
+Press Ctrl + C to stop.
 
-df -h
-Disk file system 
-It provides the disk usage of mounted file system 
-Filesystem Size Used Avail Use% Mounted on
-/dev/sda1 50G 20G 28G 42% /
-tmpfs 2.0G 0 2.0G 0% /run
+24. telnet
+Checks whether remote server or port is reachable or not.
+It commonly used to test network connectivity to verify whether receiver can able to accept connection.
 
-du -sh
-Disk usage
-How much particular file or folder is taking space
-du -sh /home/bilal
--sh means summary which gives total size
-If -s is not given then it shows all size of files and directories 
+Syntax: telnet <ip or hostname> <port-no>
 
-lsblk
-List block device 
-It shows disk, partition and mount point
-NAME SIZE TYPE MOUNTPOINT
-sda 50G disk
-├─sda1 48G part /
-└─sda2 2G part [SWAP]
-sdb 100G disk
+Eg:
+i)Test HTTP (Port 80)
+Command: telnet google.com 80
 
-Cut 
-Used to cut specific column
-cut -d ":" -f2 filename
+If connection is successful then it will give output
 
-Character cut
-echo "hello" | cut -c1-3
+Trying 142.250.xx.xx...
+Connected to google.com.
+Escape character is '^]'.
 
-Awk vs cut 
-| cut | awk |
-| ------------------------ | ------------------------ |
-| Simple column extraction | Powerful text processing |
-| Fast | Flexible |
-| Basic | Advanced |
+which means port 80 is open and reachable
 
-sed - stream editor
-Replace, modify, search or delete word
+ii)Test SSH (Port 22)
+telnet 192.168.1.10 22
 
-sed 's/linux/ubuntu' filename
-Global replace (g)
-sed 's/linux/ubuntu/g' filename
-Update file permanent 
-sed -i ________
-Print 2nd line
-sed -n '2p' filename 
-Print range of lines 
-sed -n '2,4p' filename
-Delete line
-sed '2d' filename
-sed -i == change original file
-Delete blank line
-sed '/^$/d' file
-^ = start of the line
-$ = end of the line
-^$ = there is nothing between start and end of line which called as blank space
-d = delete
+If it connects, the SSH port is open.
+
+If connection fails, then it will give output
+
+Trying 192.168.1.10...
+telnet: Unable to connect to remote host: Connection refused
+
+That means service is not running or port is blocked by a firewall
+
+Note:- Telnet port no is 23
