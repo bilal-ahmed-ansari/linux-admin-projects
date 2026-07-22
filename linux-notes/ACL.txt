@@ -1,4 +1,4 @@
-ACL (Access Control List) allow to give specific permission to specific users or groups without changing fiile or directlory owner.
+ACL (Access Control List) allow to give specific permission to specific users or groups without changing fiile or directory owner.
 Normally permissions are for 
  - Owner
  - Group
