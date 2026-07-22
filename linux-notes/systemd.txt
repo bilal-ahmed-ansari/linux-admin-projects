@@ -1,0 +1,3 @@
+systemd is a Linux service manager.
+Using systemctl command we can talk to manager to manage all services
+systemctl <status> <service-name>

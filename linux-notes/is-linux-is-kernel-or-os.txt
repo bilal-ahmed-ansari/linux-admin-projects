@@ -1,0 +1,12 @@
+Is linux is kernel or is
+Technically linux is kernel. If someone say linux os then they are taking linux based os
+Consider car is having different part such as
+Engine, tyre, steer, brake, seat
+Here engine is a car. Without engine, car will not run, it should have some parts of car like seat, and other things.
+Here if you compare this eg with linux
+Engine = kernel
+Steering = user can given commands in shell
+File system = car storage 
+System libraries = car internal components/tyre
+Application like ssh = car features or seats
+Complete car = linux os

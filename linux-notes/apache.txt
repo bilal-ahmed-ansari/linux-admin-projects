@@ -1,0 +1,24 @@
+suppose you haev a website contains 
+index.html
+css 
+images
+javascript
+
+these are all put tin one server. when someone open the website, apache send these files to browser
+
+Browser
+    ↓
+Apache
+    ↓
+Website Files
+    ↓
+Browser
+
+package name:
+a. ubuntu - apache2
+b. rhel - httpd
+
+default port: 80
+https: 443
+
+deafult file location: /var/www/html

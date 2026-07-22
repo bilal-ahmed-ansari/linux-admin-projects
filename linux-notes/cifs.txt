@@ -1,0 +1,26 @@
+commom internet file system
+it is a file sharing protocol allow to share files and folders in network
+normally we use smb, but in linux people use cifs
+
+consider there is a shared folder in windows
+\\192.168.1.100\Shared
+
+----------------
+Linux Server (Client)          Windows Server (File Server)
+192.168.1.50        ---------> 192.168.1.100
+                                |
+                                |-- D:\Shared
+                                |   (Shared Folder)
+----------------
+
+now linux want to access the folder
+sudo mkdir /mnt/share
+
+sudo mount -t cifs //192.168.1.100/shared /mnt/share -o username=bilal  ==> run it on linux
+where -t cifs = use smb.cifs protocol to connect and use
+/mnt/share = linux local mount point
+o = to give extra settings
+username to login on windows
+
+cd /mnt/share
+ls

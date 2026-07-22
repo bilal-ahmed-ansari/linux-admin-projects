@@ -1,0 +1,151 @@
+Shutdown machine:
+sudo shutdown -h now
+
+tail -f /var/log/syslog
+-f means follow 
+If new line is added in file then it will show on screen
+To exit, press ctrl c
+
+head -n 5 filename
+head -5 filename
+
+Less
+If 1000 line is there in your file then we use this command
+q: exit
+/Word: search for word
+n: search for next word
+Space: next page
+b: previous page
+
+More: similar to less, but here the navigation is limited
+Space: next page
+q: exit
+
+To print the text on screen or print values of varibales
+name="Bilal"
+echo $name
+
+It will create file if file is not created
+echo "Hello Linux" > file.txt
+
+Redirection
+Change input and output direction 
+
+Send the data to output and overwrite the file
+echo "Hello Linux" > file.txt
+
+No need to override the file, only append the output
+echo "Bilal" >> file.txt
+
+sort < names.txt
+It take file as an input and perform operation
+
+/dev/null
+It acts as a dustbin or black hole in linux
+Whatever we send here, it will discard those things.
+
+ls > /dev/null
+ls will work but it won't show output on screen
+
+To see output on screen and save that output on file
+ls | tee file.txt
+
+It won't delete older data 
+ls | tee -a file.txt
+
+xargs
+The command output will send to another command argument
+echo "file" | xargs rm
+
+Search files less than 90 days
+find -mtime +90
+
+Find files and delete
+find . -name "test.txt" -delete
+
+Locate
+It search files using database hence speed is fast
+locate filename
+
+If new files is not searching 
+sudo updatedb
+
+Grep
+It search text or pattern in file
+grep root /etc/passwd
+
+Recursive search 
+Grep -r "paswd" /etc
+
+Line no
+Grep -n
+Ignore case
+-i
+Search both the words
+grep -E "error|failed" filename
+
+Awk
+Depending on column it will extract the data
+Print 1st column
+awk '{print $1}' filename 
+Print age > 28
+awk '$2 > 28 {print $1}' filename 
+
+df -h
+Disk file system 
+It provides the disk usage of mounted file system 
+Filesystem Size Used Avail Use% Mounted on
+/dev/sda1 50G 20G 28G 42% /
+tmpfs 2.0G 0 2.0G 0% /run
+
+du -sh
+Disk usage
+How much particular file or folder is taking space
+du -sh /home/bilal
+-sh means summary which gives total size
+If -s is not given then it shows all size of files and directories 
+
+lsblk
+List block device 
+It shows disk, partition and mount point
+NAME SIZE TYPE MOUNTPOINT
+sda 50G disk
+├─sda1 48G part /
+└─sda2 2G part [SWAP]
+sdb 100G disk
+
+Cut 
+Used to cut specific column
+cut -d ":" -f2 filename
+
+Character cut
+echo "hello" | cut -c1-3
+
+Awk vs cut 
+| cut | awk |
+| ------------------------ | ------------------------ |
+| Simple column extraction | Powerful text processing |
+| Fast | Flexible |
+| Basic | Advanced |
+
+sed - stream editor
+Replace, modify, search or delete word
+
+sed 's/linux/ubuntu' filename
+Global replace (g)
+sed 's/linux/ubuntu/g' filename
+Update file permanent 
+sed -i ________
+Print 2nd line
+sed -n '2p' filename 
+Print range of lines 
+sed -n '2,4p' filename
+Delete line
+sed '2d' filename
+sed -i == change original file
+Delete blank line
+sed '/^$/d' file
+^ = start of the line
+$ = end of the line
+^$ = there is nothing between start and end of line which called as blank space
+d = delete

@@ -1,0 +1,43 @@
+consider file owner is bilal and group is devops
+I want rahul reead this file only
+acl (access control list) is an advance linux permission
+
+consider we have a rule of our school room
+Owner → Full access
+
+Team → Read access
+
+Visitors → No access
+
+managr say allow rahul in rahul even he is not an owner, not in a team as well.
+
+without acl, rahul won't access
+Owner (Bilal)  → Read + Write
+
+Group (DevOps) → Read
+
+Others         → No Access
+
+with acl, rahul has read access
+Owner (Bilal) → Read + Write
+
+Group (DevOps) → Read
+
+Rahul → Read
+
+Others → No Access
+
+to check acl
+geftacl filename
+
+to set facl
+setfacl -m (modify) -u(username):<name-of-user>:<permission> filename
+
+for group:
+setfacl -m (modify) -g(group):<name-of-group>:<permission> filename
+
+remove acl
+setfacl -x u:username filename
+
+remove all username
+setfacl -b filename
