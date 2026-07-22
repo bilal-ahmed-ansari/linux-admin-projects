@@ -1,4 +1,4 @@
-it is a photo of vm which saves the current state of vm
+it is a copy of vm which saves the current state of vm
 consider your vm having
 Ubuntu VM
 
